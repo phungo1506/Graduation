@@ -1,4 +1,5 @@
 from mmdet.apis import inference_detector, init_detector, show_result_pyplot
+from PaddleDetection.deploy.pptracking.python.mot_sde_infer import SDE_Detector
 import base64
 import time
 import operator
@@ -7,6 +8,8 @@ from datetime import datetime
 # Choose to use a config and initialize the detector
 minh_config = '/home/object_detection/K18_Minh/demo/mmdetection/pth/cascade_double_heads_focal_loss.py'
 thuan_config = '/home/object_detection/K18_SongThuan/ThesisDemo/model/cdersnet_ga/cdersnet_ga.py'
+phu_config = '"/home/object_detection/MOT/work/PaddleDetection/deploy/pptracking/python/tracker_config.yml"'
+phu_checkpoint = '/home/object_detection/MOT/work/PaddleDetection/output/yolox_x_24e_800x1440_mix_det/best_model.pdparams'
 # Setup a checkpoint file to load
 # checkpoint = '/home/object_detection/K18_Minh/demo/mmdetection/pth/best_bbox_mAP_epoch_12.pth'
 thuan_checkpoint = '/home/object_detection/K18_SongThuan/ThesisDemo/model/cdersnet_ga/best_bbox_mAP.pth'
@@ -203,16 +206,18 @@ def web_thuan():
         filename = secure_filename(file.filename)
         file.save(os.path.join(thuan_input_path, filename))
         flash('Image successfully uploaded')
-        model = init_detector(thuan_config, thuan_checkpoint, device='cuda:0')
-        det_results = detect_func(model, thuan_input_path + str(filename))
-        #Caption recognition
-        config_ocr = Cfg.load_config_from_name('vgg_transformer')
-        config_ocr['weights'] = thuan_checkpoint_ocr
-        config_ocr['cnn']['pretrained']=False
-        config_ocr['device'] = 'cuda:0'
-        config_ocr['predictor']['beamsearch']=False
-        detector = Predictor(config_ocr)
-        out_file, out_json_file = infer_reg_func(det_results, thuan_input_path + str(filename), detector, host = 'Thuan')
+        detector = SDE_Detector(model_dir = phu_checkpoint,tracker_config = phu_config, device='cuda:3', output_dir =thuan_output_path, save_mot_txts =thuan_output_path )
+        out_file, out_json_file = detector.predict_video(thuan_input_path + str(filename))
+        # model = init_detector(thuan_config, thuan_checkpoint, device='cuda:0')
+        # det_results = detect_func(model, thuan_input_path + str(filename))
+        # #Caption recognition
+        # config_ocr = Cfg.load_config_from_name('vgg_transformer')
+        # config_ocr['weights'] = thuan_checkpoint_ocr
+        # config_ocr['cnn']['pretrained']=False
+        # config_ocr['device'] = 'cuda:0'
+        # config_ocr['predictor']['beamsearch']=False
+        # detector = Predictor(config_ocr)
+        # out_file, out_json_file = infer_reg_func(det_results, thuan_input_path + str(filename), detector, host = 'Thuan')
         
         with open(out_file, "rb") as image_file:
           encoded_string = base64.b64encode(image_file.read())

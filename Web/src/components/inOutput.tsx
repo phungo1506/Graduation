@@ -28,13 +28,13 @@ const InputOutput = ({
       ) : position === "Input" ? (
         <ContentCard className="contentCard">
           <ContentCardText className="contentCardText">
-            No Image Uploaded
+            No Video Uploaded
           </ContentCardText>
         </ContentCard>
       ) : (
         <ContentCard className="contentCard">
           <ContentCardText className="contentCardText">
-            No Image Predicted
+            No Video Predicted
           </ContentCardText>
         </ContentCard>
       )}

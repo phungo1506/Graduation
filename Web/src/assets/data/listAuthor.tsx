@@ -1,14 +1,14 @@
-import NQT_image from "../images/author/NQT.jpg";
-import NTT_image from "../images/author/NTT.jpg";
+import NQT_image from "../images/author/Ngo_Minh_Phu.jpg";
+import NTT_image from "../images/author/VDN.jpg";
 import NTTMK_image from "../images/author/NTTMK.jpg";
 export const listAuthor = [
   {
     image: NQT_image,
-    name: "Nguyễn Quang Thuận",
-    birthday: "29/06/2000",
-    facebook: "https://www.facebook.com/nqt290600/",
+    name: "Ngô Minh Phú",
+    birthday: "15/06/2000",
+    facebook: "https://www.facebook.com/phungo.150600/",
     // google: "",
-    github: "https://github.com/NQT2906/",
+    github: "https://github.com/phungo1506/",
   },
   {
     image: NTTMK_image,
@@ -20,11 +20,10 @@ export const listAuthor = [
   },
   {
     image: NTT_image,
-    name: "Nguyễn Trọng Thuận",
-    birthday: "20/08/2000",
-    facebook: "https://www.facebook.com/thuan.nguyentrong205/",
-    google:
-      "https://scholar.google.com/citations?user=ih9cgSwAAAAJ&hl=vi&oi=ao",
-    github: "https://github.com/trongthuan205/",
+    name: "Võ Duy Nguyên",
+    birthday: "29/01/1990",
+    facebook: "https://www.facebook.com/nguyenvd2901/",
+    google: "https://scholar.google.com/citations?user=LMLI9ZsAAAAJ&hl=en",
+    github: "https://nguyenvd-uit.github.io/",
   },
 ];
