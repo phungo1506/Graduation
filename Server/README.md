@@ -2,10 +2,8 @@
 
 Contact us: [UIT-Together Research Group](https://uit-together.github.io/)
 
-![](images/cdersnet.png)
 
-> **[CDeRSNet: Towards High Performance Object Detection in Vietnamese Documents Images (MMM'22)]()**  
-> Thuan Trong Nguyen, Thuan Q. Nguyen, Long Duong, Nguyen D.Vo, Khang Nguyen
+
 
 <!-- > arXiv preprint ([arXiv:2103.07733](https://arxiv.org/pdf/2103.07733.pdf)) / CVPR [Open access](https://openaccess.thecvf.com/content/CVPR2021/papers/Han_ReDet_A_Rotation-Equivariant_Detector_for_Aerial_Object_Detection_CVPR_2021_paper.pdf). -->
 
