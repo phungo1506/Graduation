@@ -12,8 +12,7 @@ AERIAL IMAGE WEB.</h3>
   <p align="center">
     <br />
 
-There are all files for demo DETECTION AND TRACKING OF MOTORCYCLES IN 
-AERIAL IMAGE.
+## There are all files for demo DETECTION AND TRACKING OF MOTORCYCLES IN AERIAL IMAGE.
 
 ## Server
 
