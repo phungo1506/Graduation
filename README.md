@@ -1,6 +1,7 @@
 # GraduationDemo
 
-There are all files for demo PARSING VIETNAMESE PUBLICATIONS.
+There are all files for demo DETECTION AND TRACKING OF MOTORCYCLES IN 
+AERIAL IMAGE.
 
 ## Server
 
