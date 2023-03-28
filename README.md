@@ -46,4 +46,8 @@ AERIAL IMAGE.
   	```cmd
    npm start
    ```
+
+## Contact
+- Ngô Minh Phú | Email: 18521243@gm.uit.edu.vn
+- [UIT-Together Research Group](https://uit-together.github.io/) 
 ## You need to follow README.md file in every folder
