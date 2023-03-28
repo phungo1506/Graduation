@@ -13,7 +13,7 @@ Install library and packed which are needed to create to the app.
 ### `create file env in folder DEMO_APP`
 
 Create file .env in folder DEMO_APP with content below:\
-REACT_APP_SERVER_URL=http://192.168.20.166:3000/thuan
+REACT_APP_SERVER_URL=http://192.168.20.166:3000/phu
 
 ### `npm start`
 
