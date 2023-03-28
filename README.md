@@ -5,7 +5,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/phungo1506/Graduation">
-    <img src="https://github.com/MinhTran0311/AerialObjectDetection/blob/main/Mobile/assets/icons/ic_appicon.png" alt="Logo" width="200" height="200">
+    <img src="https://github.com/phungo1506/Graduation/blob/master/Web/public/web.png" alt="Logo" width="200" height="200">
   </a>
   <h3 align="center">DETECTION AND TRACKING OF MOTORCYCLES IN 
 AERIAL IMAGE WEB.</h3>
